@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Quantity</title>
+</head>
+<body>
+    <h1>Cart Quantity</h1>
+
+    <!--  For chips -->
+    <h2>chips</h2>
+        <button type="button" onclick="
+            chipsQuantity = chipsQuantity + 5.5;
+            console.log(`chips Quantity: ￥${chipsQuantity}`);
+        ">Add brand 1 chips(￥5.5)</button>
+
+        <button type="button" onclick="
+            chipsQuantity = chipsQuantity + 7.3;
+            console.log(`chips Quantity: ￥${chipsQuantity}`);
+        ">Add brand 2 chips(￥7.3)</button>
+
+        <button type="button" onclick="
+            chipsQuantity = 0;
+            console.log('Chips Quantity was reset');
+        ">Reset chips</button>
+
+    <!-- For cupnoodles -->
+    <h2>cupnoodles</h2>
+        <button type="button" onclick="
+            cupnoodlesQuantity = cupnoodlesQuantity + 5.3;
+            console.log(`cupnoodles Quantity: ￥${cupnoodlesQuantity}`);
+        ">Add brand 1 cupnoodles(￥5.3)</button>
+
+        <button type="button" onclick="
+            cupnoodlesQuantity = cupnoodlesQuantity + 8.3;
+            console.log(`cupnoodles Quantity: ￥${cupnoodlesQuantity}`);
+        ">Add brand 2 cupnoodles(￥8.3)</button>
+
+        <button type="button" onclick="
+            cupnoodlesQuantity = 0;
+            console.log('Cupnoodles Quantity was reset');
+        ">Reset cupnoodles</button>
+
+    <!-- For colas -->
+    <h2>colas</h2>
+        <button type="button" onclick="
+            colaQuantity = colaQuantity + 4.7;
+            console.log(`cola Quantity: ￥${colaQuantity}`);
+        ">Add 1 cola(￥4.7)</button>
+
+        <button type="button" onclick="
+            colaQuantity = colaQuantity + 24;
+            console.log(`cola Quantity: ￥${colaQuantity}`);
+        ">Add a set of colas(6 cans)(￥24)</button>
+
+        <button type="button" onclick="
+            colaQuantity = 0;
+            console.log('Cola Quantity was reset');
+        ">Reset colas</button>
+
+    <!-- Display Total Quantity -->
+    <h1>In Total</h1>
+        <button type="button" onclick="
+            let totalQuantity = chipsQuantity + cupnoodlesQuantity + colaQuantity;
+            console.log(`Total Cart Quantity: ￥${totalQuantity}`);
+        ">Show Total Quantity</button>
+
+    <button type="button" onclick="
+        chipsQuantity = 0;
+        cupnoodlesQuantity = 0;
+        colaQuantity = 0;
+        console.log('The cart was empty');
+    ">Reset cart</button>
+
+    <script>
+        let chipsQuantity = 0;
+        let cupnoodlesQuantity = 0;
+        let colaQuantity = 0;
+    </script>
+
+<p>Total Price: ￥<button onclick="
+    let totalPrice = chipsQuantity + cupnoodlesQuantity + colaQuantity;
+    alert(`Total Price: ￥${totalPrice}`);
+">click</button> </p>
+
+</body>
+<footer>
+    <hr>
+        <!-- <hr> -->
+        Artist name: Muxi Chen<br>
+        &copy; 2024 copyright reserved<br>
+        <a href="mailto:muxi.chen@dukekunshan.edu.cn">mc796@duke.edu</a>
+</footer>
+</body>
+
+</html>
